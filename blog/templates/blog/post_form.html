@@ -1,0 +1,19 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+	<div class="content-section">
+		<form method="POST">
+			<!-- add CSRF(Cross Site Request Forgery token that protects our form from certains attacks) token -->
+			{% csrf_token %}
+			<fieldset>
+				<legend class="border-bottom mb-4">Writing Blog Post</legend>
+				{{ form|crispy }}
+				<!-- {{form.as_p}} -->
+				<!-- how do we add a field to our user creation form -->
+			</fieldset>
+			<div class="form-group">
+				<button class="btn btn-outline-info" type="submit">Post ur own post</button>
+			</div>
+		</form>
+	</div>
+{% endblock content %}
