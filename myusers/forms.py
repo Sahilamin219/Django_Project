@@ -1,4 +1,4 @@
-# we are going to create a first uesr form that inherites from the user creation form (django)
+# we are going to create a first user form that inherites from the user creation form (django)
 from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm

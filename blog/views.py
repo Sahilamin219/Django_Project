@@ -1,9 +1,13 @@
 from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+
 from django.contrib.auth.models import User
 # from django.http import HttpResponse
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from .models import Post
+from .models import Post, Comment
+from .forms import PostForm, CommentForm
 from django.contrib.auth.models import User
 # Create your views here.
 # posts=[
@@ -107,5 +111,28 @@ def about(request):
 # backend logic for us ...there are different types of class based views which are lsit views, detailed views 
 # updates views, delete views
 
+def add_comment_to_post(request, pk, *args, **kwargs):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == "POST":
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post
+            comment.save()
+            return redirect('post-detail', pk=post.pk)
+    else:
+        form = CommentForm()
+    return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
- # "I don't need anyone. I just need everyone and then some"
+
+@login_required
+def comment_approve(request, pk):
+	comment = get_object_or_404(Comment, pk=pk)
+	comment.approve()
+	return redirect('post_detail', pk=comment.post.pk)
+
+@login_required
+def comment_remove(request, pk):
+	comment = get_object_or_404(Comment, pk=pk)
+	comment.delete()
+	return redirect('post_detail', pk=comment.post.pk)

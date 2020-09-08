@@ -65,3 +65,7 @@ a.article-title:hover {
   color: #333;
   text-decoration: none;
 }
+.comment {
+  color: #428bca;
+  margin: 20px 0px 20px 20px;
+}

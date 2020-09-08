@@ -17,4 +17,22 @@
 	    <p class="article-content">{{ object.content }}</p>
 	  </div>
 	</article>
+	<hr>
+	<a class="button" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comments here</a>
+	{% for comment in post.comments.all %}
+	    <div class="comment">
+	        <div class="date">{{ comment.created_date }}
+	        {% if not comment.approved_comment %}
+                <a class="btn btn-default"href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+            {% endif %}
+        	</div>
+	        <strong>{{ object.author.username }}</strong>
+	        <p>{{ comment.text|linebreaks }}</p>
+	    </div>
+	{% empty %}
+		<div class="media-body">
+	    	<p><strong>No comments here yet :(</strong></p>
+	    </div>
+	{% endfor %}
 {% endblock content %}

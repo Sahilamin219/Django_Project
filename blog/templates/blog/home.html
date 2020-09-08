@@ -8,10 +8,15 @@
 		  <div class="media-body">
 		    <div class="article-metadata">
 		      <a class="mr-2" href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+		      <!-- <div class="date">
+                {{ post.published_date }}
+              </div> -->
 		      <small class="text-muted">{{ post.date_posted|date:"F d, Y"}}</small>
 		    </div>
 		    <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+		    <!-- <p>{{ post.text|linebreaksbr }}</p> -->
 		    <p class="article-content">{{ post.content }}</p>
+		    <h5><a href="{% url 'post-detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a></h5>
 		  </div>
 		</article>
 	{% endfor %}
