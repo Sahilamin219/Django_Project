@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import PostListView,PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, add_comment_to_post
+from .views import (PostListView,PostDetailView, PostCreateView, PostUpdateView, PostDeleteView, UserPostListView, 
+					add_comment_to_post, comment_approve, comment_remove,)
 from . import views
 
 urlpatterns=[

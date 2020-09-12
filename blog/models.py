@@ -40,12 +40,12 @@ class Comment(models.Model):
     def approve(self):
         self.approved_comment = True
         self.save()
-    class Meta:
-        ordering = ('created_date',)
+    # class Meta:
+    #     ordering = ('created_date',)
     def __str__(self):
         return self.text
-    def get_absolute_url(self):
-    	return reverse('post-detail', kwargs={'pk':self.pk})
+    # def get_absolute_url(self):
+    # 	return reverse('post-detail', kwargs={'pk':self.pk})
 
 # class Comment(models.Model):
 #     post = models.ForeignKey(Post, related_name='comments')
