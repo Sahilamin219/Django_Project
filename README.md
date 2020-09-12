@@ -1,6 +1,7 @@
 # Django_Project
 font end -HTML,CSS ; back end  -djanago
-Just a blogging website created by me as a project to practicing Django.It was made using Python 3.6 + Django and database is SQLite. Bootstrap was used for styling.
+
+Its just a blogging website created by me as a project to practice Django.It was made using Python 3.6 + Django and database is SQLite. Bootstrap was used for styling.
 
 Helper Tools
 Django Admin
