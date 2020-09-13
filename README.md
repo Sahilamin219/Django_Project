@@ -6,6 +6,10 @@ Its just a blogging website created by me as a project to practice Django.It was
 Helper Tools
 Django Admin
 
+To run it on local machine do
+$ cd Django_project
+$ python manage.py runserver
+
 It is possible to add additional admin user who can login to the admin site. Run the following command:
 
 $ python manage.py createsuperuser
