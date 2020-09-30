@@ -4,6 +4,16 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
 
+# -------------API-----------------
+from rest_framework import viewsets
+from .serializers import HeroSerializer
+from .models import Profile, Hero
+class HeroViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all().order_by('id')
+    serializer_class = HeroSerializer
+# -------------API-----------------
+
+
 # Create your views here.
 def register(request):
 	# now we have to creae a form which will pass to views
@@ -50,3 +60,4 @@ def profile(request):
 		'p_form':p_form
 	}
 	return render(request, 'myusers/profile.html', context)
+

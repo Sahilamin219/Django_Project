@@ -23,3 +23,13 @@ class Profile(models.Model):
 			output_size=(300, 300)
 			img.thumbnail(output_size)
 			img.save(self.image.path)
+
+class Hero(models.Model):
+    # name = models.CharField(max_length=60)     .............X
+    # alias = models.CharField(max_length=60)    .............X
+    # Cannot resolve keyword 'name' into field. Choices are: id, image, user, user_id
+    id = User.id
+    image = models.ImageField(default='default.jpg', upload_to = 'profile_pics')
+    user = User.username
+    def __str__(self):
+        return self.user

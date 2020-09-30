@@ -27,6 +27,7 @@ urlpatterns = [
     # path('blog/', include('blog.urls')),
     # url(r'^blog_dev/', include('blog.URLs')),
     url('', include('blog.URLs')),
+    path('hero/', include('myusers.urls')),#api
     #u can leave there empty strign to make ur blog page as a home page
     #due to which just localhost:8000 will bring u to blog home page and localhost:8000/about to blog about page instead of localhost:8000/blog_dev/about
     #here in blog.urls blog is my app's name and urls(URLs) is my newly created file which i want to respons
