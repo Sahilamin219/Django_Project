@@ -1,5 +1,6 @@
 # Django_Project
-font end -HTML,CSS ; back end  -djanago
+
+Technologies : Frontend -HTML,CSS  Backend  - Django-bootstrap3, Djanago-Cripsy form
 
 Its just a blogging website created by me as a project to practice Django.It was made using Python 3.6 + Django and database is SQLite. Bootstrap was used for styling.
 
