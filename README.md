@@ -1,4 +1,6 @@
-# A Blog App - Django framework based Project
+# Wordoid
+
+ > # A Blog App - Django framework based Project
 
 Technologies : Frontend -HTML,CSS   Backend  - Django-bootstrap3, Djanago-Cripsy form
 
