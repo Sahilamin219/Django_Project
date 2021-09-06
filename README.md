@@ -49,3 +49,10 @@ https://user-images.githubusercontent.com/48405411/127373436-1c28635f-3e1e-48ec-
 
 
 ![Screenshot from 2021-04-04 13-30-45](https://user-images.githubusercontent.com/48405411/113506808-92f91e00-9564-11eb-8675-805d050c166a.png)
+
+# Like Functionalty Added 
+
+SQLlite Database table view for like features on each blog posts .
+![Screenshot from 2021-09-07 00-32-33](https://user-images.githubusercontent.com/48405411/132254523-e74a3ee8-0c1e-4ea5-9e20-9e5c94504a90.png)
+![Screenshot from 2021-09-06 20-38-18](https://user-images.githubusercontent.com/48405411/132254525-7bf5a2bf-fe6a-4c3e-b552-5b81eff55f10.png)
+
