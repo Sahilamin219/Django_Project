@@ -6,6 +6,8 @@ Technologies : Frontend -HTML,CSS   Backend  - Django-bootstrap3, Djanago-Cripsy
 
 Its just a blogging website (responsive web app ) created by me as a project to practice Django.It was made using Python 3.6 + Django and database is SQLite. Bootstrap was used for styling.
 
+<b> Hosted On </b>:  https://dproject123.herokuapp.com/
+
 ### Helper Tools For Django Admin
 
 To run it on local machine do
